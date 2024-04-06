@@ -26,7 +26,7 @@ and where ![Derive](https://latex.codecogs.com/svg.latex?Derive) just converts a
 
 Next, we compute the ciphertext values of:
 
-![C1 = r \cdot G](https://latex.codecogs.com/svg.latex?C1%20%3D%20r%20%5Ccdot%20G)
+![C1 = r \cdot G](https://latex.codecogs.com/svg.latex?C1%20%3D%20r%20%5Ccdot%20G)  
 ![C2 = M \cdot H + r \cdot Q](https://latex.codecogs.com/svg.latex?C2%20%3D%20M%20%5Ccdot%20H%20%2B%20r%20%5Ccdot%20Q)
 
 and where ![M](https://latex.codecogs.com/svg.latex?M) is the ![msg](https://latex.codecogs.com/svg.latex?%5Ctext%7Bmsg%7D) value converted into a scalar value. We then append these together to create the additional data that will be used for the symmetric key encryption of the message:
