@@ -48,7 +48,7 @@ Here is an overview of the method:
 
 To generate the proof, we generate a random value (![r](https://latex.codecogs.com/svg.latex?r)) and a blinding factor (![b](https://latex.codecogs.com/svg.latex?b)) to give two points on the elliptic curve:
 
-![R1 = r \cdot G](https://latex.codecogs.com/svg.latex?R1%20%3D%20r%20%5Ccdot%20G)
+![R1 = r \cdot G](https://latex.codecogs.com/svg.latex?R1%20%3D%20r%20%5Ccdot%20G)  
 ![R2 = r \cdot Q + b \cdot H](https://latex.codecogs.com/svg.latex?R2%20%3D%20r%20%5Ccdot%20Q%20%2B%20b%20%5Ccdot%20H)
 
 Next, we create the challenge bytes with:
