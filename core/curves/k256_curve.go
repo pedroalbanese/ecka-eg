@@ -9,11 +9,11 @@ import (
 
 	koblitz "github.com/pedroalbanese/secp256k1"
 
-	"github.com/pedroalbanese/ecka-eg2/internal"
-	"github.com/pedroalbanese/ecka-eg2/core/curves/native"
-	secp256k1 "github.com/pedroalbanese/ecka-eg2/core/curves/native/k256"
-	"github.com/pedroalbanese/ecka-eg2/core/curves/native/k256/fp"
-	"github.com/pedroalbanese/ecka-eg2/core/curves/native/k256/fq"
+	"github.com/pedroalbanese/ecka-eg/internal"
+	"github.com/pedroalbanese/ecka-eg/core/curves/native"
+	secp256k1 "github.com/pedroalbanese/ecka-eg/core/curves/native/k256"
+	"github.com/pedroalbanese/ecka-eg/core/curves/native/k256/fp"
+	"github.com/pedroalbanese/ecka-eg/core/curves/native/k256/fq"
 )
 
 var oldK256Initonce sync.Once
