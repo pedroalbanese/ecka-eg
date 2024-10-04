@@ -14,8 +14,8 @@ import (
 )
 
 var (
-//	k256Initonce sync.Once
-//	k256         Curve
+	k256Initonce sync.Once
+	k256         Curve
 
 	bls12381g1Initonce sync.Once
 	bls12381g1         Curve
@@ -34,7 +34,7 @@ var (
 )
 
 const (
-//	K256Name       = "secp256k1"
+	K256Name       = "secp256k1"
 	BLS12381G1Name = "BLS12381G1"
 	BLS12381G2Name = "BLS12381G2"
 	BLS12831Name   = "BLS12831"
@@ -426,6 +426,8 @@ func GetCurveByName(name string) *Curve {
 		return ED25519()
 	case PallasName:
 		return PALLAS()
+	case K256Name:
+		return K256()
 	default:
 		return nil
 	}
@@ -494,6 +496,20 @@ func BLS12381(preferredPoint Point) *PairingCurve {
 			Value: &bls12381.E{},
 		},
 		Name: BLS12831Name,
+	}
+}
+
+// K256 returns the secp256k1 curve
+func K256() *Curve {
+	k256Initonce.Do(k256Init)
+	return &k256
+}
+
+func k256Init() {
+	k256 = Curve{
+		Scalar: new(ScalarK256).Zero(),
+		Point:  new(PointK256).Identity(),
+		Name:   K256Name,
 	}
 }
 
